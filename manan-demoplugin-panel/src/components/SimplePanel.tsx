@@ -11,210 +11,215 @@ import { FetchData } from './GroupOne';
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
+  console.log(data.series[3]);
   const sensorOne = FetchData(data.series[0]);
   const sensorTwo = FetchData(data.series[1]);
+  const sensorThree = FetchData(data.series[2]);
+  const sensorFour = FetchData(data.series[3]);
+
+  const colors = ['#FF6663', '#FEB144', '#9EE09E', '#9EC1CF', '#CC99C9'];
 
   const seriesData = [
     [
       sensorOne.map((item, key) => ({
-        name: 'G1S1',
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
       sensorTwo.map((item, key) => ({
-        name: 'G1S2',
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S3',
+      sensorThree.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
     ],
     [
-      sensorTwo.map((item, key) => ({
-        name: 'G1S4',
+      sensorFour.map((item, key) => ({
+        name: `G1S${key + 1}`,
         type: 'line',
         symbol: 'emptycircle',
         smooth: true,
         itemStyle: {
-          color: 'red',
+          color: colors[key],
         },
         data: item,
       })),
