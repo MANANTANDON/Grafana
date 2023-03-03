@@ -1,185 +1,229 @@
 import React from 'react';
-import { PanelData, PanelProps } from '@grafana/data';
+import { PanelProps } from '@grafana/data';
 import { SimpleOptions } from 'types';
 // import { css } from '@emotion/css';
 // import { useStyles2 } from '@grafana/ui';
 import ReactECharts from 'echarts-for-react';
 import { timeData } from './Data';
 
+import { FetchData } from './GroupOne';
+
 interface Props extends PanelProps<SimpleOptions> {}
 
-const G1S1: any[][] = [];
-const G1S2: any[][] = [];
-const G1S3: any[][] = [];
-const G1S4: any[][] = [];
-const G1S5: any[][] = [];
-const G1S6: any[][] = [];
-const G1S7: any[][] = [];
-const G1S8: any[][] = [];
-const G1S9: any[][] = [];
-const G1S10: any[][] = [];
-const G1S11: any[][] = [];
-const G1S12: any[][] = [];
-const G1S13: any[][] = [];
-const G1S14: any[][] = [];
-const G1S15: any[][] = [];
-const G1S16: any[][] = [];
-const G1S17: any[][] = [];
-const G1S18: any[][] = [];
-const G1S19: any[][] = [];
-const G1S20: any[][] = [];
-const G1S21: any[][] = [];
-const G1S22: any[][] = [];
-const G1S23: any[][] = [];
-const G1S24: any[][] = [];
-const G1S25: any[][] = [];
-const G1S26: any[][] = [];
-const G1S27: any[][] = [];
-const G1S28: any[][] = [];
-const G1S29: any[][] = [];
-const G1S30: any[][] = [];
-const G1S31: any[][] = [];
-const G1S32: any[][] = [];
-const G1S33: any[][] = [];
-const G1S34: any[][] = [];
-const G1S35: any[][] = [];
-const G1S36: any[][] = [];
-const G1S37: any[][] = [];
-const G1S38: any[][] = [];
-const G1S39: any[][] = [];
-const G1S40: any[][] = [];
-const G1S41: any[][] = [];
-const G1S42: any[][] = [];
-const G1S43: any[][] = [];
-const G1S44: any[][] = [];
-const G1S45: any[][] = [];
-const G1S46: any[][] = [];
-const G1S47: any[][] = [];
-const G1S48: any[][] = [];
-const G1S49: any[][] = [];
-const G1S50: any[][] = [];
-
-const setData = (data: PanelData) => {
-  for (let i = 0; i < data.series[0].fields[0].values.toArray().length; i++) {
-    G1S1.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[1].values.toArray()[i]]);
-    G1S2.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[2].values.toArray()[i]]);
-    G1S3.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[3].values.toArray()[i]]);
-    G1S4.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[4].values.toArray()[i]]);
-    G1S5.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[5].values.toArray()[i]]);
-    G1S6.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[6].values.toArray()[i]]);
-    G1S7.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[7].values.toArray()[i]]);
-    G1S8.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[8].values.toArray()[i]]);
-    G1S9.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[9].values.toArray()[i]]);
-    G1S10.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[10].values.toArray()[i]]);
-    // G1S11.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[11].values.toArray()[i]]);
-    // G1S12.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[12].values.toArray()[i]]);
-    // G1S13.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[13].values.toArray()[i]]);
-    // G1S14.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[14].values.toArray()[i]]);
-    // G1S15.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[15].values.toArray()[i]]);
-    // G1S16.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[16].values.toArray()[i]]);
-    // G1S17.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[17].values.toArray()[i]]);
-    // G1S18.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[18].values.toArray()[i]]);
-    // G1S19.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[19].values.toArray()[i]]);
-    // G1S20.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[20].values.toArray()[i]]);
-    // G1S21.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[21].values.toArray()[i]]);
-    // G1S22.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[22].values.toArray()[i]]);
-    // G1S23.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[23].values.toArray()[i]]);
-    // G1S24.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[24].values.toArray()[i]]);
-    // G1S25.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[25].values.toArray()[i]]);
-    // G1S26.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[26].values.toArray()[i]]);
-    // G1S27.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[27].values.toArray()[i]]);
-    // G1S28.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[28].values.toArray()[i]]);
-    // G1S29.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[29].values.toArray()[i]]);
-    // G1S30.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[30].values.toArray()[i]]);
-    // G1S31.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[31].values.toArray()[i]]);
-    // G1S32.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[32].values.toArray()[i]]);
-    // G1S33.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[33].values.toArray()[i]]);
-    // G1S34.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[34].values.toArray()[i]]);
-    // G1S35.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[35].values.toArray()[i]]);
-    // G1S36.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[36].values.toArray()[i]]);
-    // G1S37.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[37].values.toArray()[i]]);
-    // G1S38.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[38].values.toArray()[i]]);
-    // G1S39.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[39].values.toArray()[i]]);
-    // G1S40.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[40].values.toArray()[i]]);
-    // G1S41.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[41].values.toArray()[i]]);
-    // G1S42.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[42].values.toArray()[i]]);
-    // G1S43.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[43].values.toArray()[i]]);
-    // G1S44.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[44].values.toArray()[i]]);
-    // G1S45.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[45].values.toArray()[i]]);
-    // G1S46.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[46].values.toArray()[i]]);
-    // G1S47.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[47].values.toArray()[i]]);
-    // G1S48.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[48].values.toArray()[i]]);
-    // G1S49.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[49].values.toArray()[i]]);
-    // G1S50.push([data.series[0].fields[0].values.toArray()[i], data.series[0].fields[50].values.toArray()[i]]);
-  }
-};
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
-  setData(data);
+  const sensorOne = FetchData(data.series[0]);
+  const sensorTwo = FetchData(data.series[1]);
 
-  const sensors = [
-    G1S1,
-    G1S2,
-    G1S3,
-    G1S4,
-    G1S5,
-    G1S6,
-    G1S7,
-    G1S8,
-    G1S9,
-    G1S10,
-    // G1S11,
-    // G1S12,
-    // G1S13,
-    // G1S14,
-    // G1S15,
-    // G1S16,
-    // G1S17,
-    // G1S18,
-    // G1S19,
-    // G1S20,
-    // G1S21,
-    // G1S22,
-    // G1S23,
-    // G1S24,
-    // G1S25,
-    // G1S16,
-    // G1S27,
-    // G1S28,
-    // G1S29,
-    // G1S30,
-    // G1S31,
-    // G1S32,
-    // G1S33,
-    // G1S34,
-    // G1S35,
-    // G1S36,
-    // G1S37,
-    // G1S38,
-    // G1S39,
-    // G1S40,
-    // G1S41,
-    // G1S42,
-    // G1S43,
-    // G1S44,
-    // G1S45,
-    // G1S46,
-    // G1S47,
-    // G1S48,
-    // G1S49,
-    // G1S50,
+  const seriesData = [
+    [
+      sensorOne.map((item, key) => ({
+        name: 'G1S1',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S2',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S3',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
+    [
+      sensorTwo.map((item, key) => ({
+        name: 'G1S4',
+        type: 'line',
+        symbol: 'emptycircle',
+        smooth: true,
+        itemStyle: {
+          color: 'red',
+        },
+        data: item,
+      })),
+    ],
   ];
 
-  const shiftArray = () => {
-    for (let i = 0; i < 5; i++) {
-      sensors.shift();
-    }
-  };
-
-  const cOptions: any[] = [];
-
-  for (let i = 0; i < 10; i++) {
-    let count = 0;
-    cOptions[i] = {
+  const chartsOption: any[] = [];
+  for (let i = 0; i < seriesData.length; i++) {
+    chartsOption[i] = {
       tooltip: {
         trigger: 'item',
         axisPointer: {
@@ -211,7 +255,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       },
       yAxis: {
         type: 'value',
-        name: 'Group 1',
+        name: `Group ${i + 1}`,
         nameTextStyle: {
           align: 'left',
           verticalAlign: 'middle',
@@ -223,63 +267,9 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
           },
         },
       },
-      series: [
-        {
-          name: 'G1S1',
-          type: 'line',
-          symbol: 'emptycircle',
-          smooth: true,
-          itemStyle: {
-            color: options.color,
-          },
-          data: sensors[count],
-        },
-        {
-          name: 'G1S2',
-          type: 'line',
-          symbol: 'emptycircle',
-          smooth: true,
-          itemStyle: {
-            color: '#9EC1CF',
-          },
-          data: sensors[count + 1],
-        },
-        {
-          name: 'G1S3',
-          type: 'line',
-          symbol: 'emptycircle',
-          smooth: true,
-          itemStyle: {
-            color: '#9EE09E',
-          },
-          data: sensors[count + 2],
-        },
-        {
-          name: 'G1S4',
-          type: 'line',
-          symbol: 'emptycircle',
-          smooth: true,
-          itemStyle: {
-            color: '#FEB144',
-          },
-          data: sensors[count + 3],
-        },
-        {
-          name: 'G1S5',
-          type: 'line',
-          symbol: 'emptycircle',
-          smooth: true,
-          itemStyle: {
-            color: '#FF6663',
-          },
-          data: sensors[count + 4],
-        },
-      ],
+      series: seriesData[i][0],
     };
-    shiftArray();
   }
-
-  console.log(cOptions);
 
   const testOption = {
     title: {
@@ -309,7 +299,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       itemStyle: {
         color: 'white',
       },
-      data: G1S1,
+      data: sensorOne[0],
     },
   };
 
@@ -332,7 +322,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
           height: '315px',
         }}
       >
-        {cOptions.map((item, key) => (
+        {chartsOption.map((item, key) => (
           <div style={{ width: '100px' }} key={key}>
             <ReactECharts option={item} />
           </div>
