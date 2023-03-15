@@ -2,7 +2,7 @@ import React from 'react';
 import { PanelProps } from '@grafana/data';
 import { SimpleOptions } from 'types';
 // import { css } from '@emotion/css';
-// import { useStyles2 } from '@grafana/ui';
+import { useTheme2 } from '@grafana/ui';
 import ReactECharts from 'echarts-for-react';
 import { timeData } from './Data';
 
@@ -11,24 +11,33 @@ import { FetchData } from './GroupOne';
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
-  console.log(data.series[3]);
   const sensorOne = FetchData(data.series[0]);
   const sensorTwo = FetchData(data.series[1]);
   const sensorThree = FetchData(data.series[2]);
   const sensorFour = FetchData(data.series[3]);
+  const sensorFive = FetchData(data.series[4]);
+  const sensorSix = FetchData(data.series[5]);
+  const sensorSeven = FetchData(data.series[6]);
+  const sensorEight = FetchData(data.series[7]);
+  const sensorNine = FetchData(data.series[8]);
+  const sensorTen = FetchData(data.series[9]);
+  const sensorEleven = FetchData(data.series[10]);
+  const sensorTwelve = FetchData(data.series[11]);
+  const sensorThirteen = FetchData(data.series[12]);
+  const sensorFourteen = FetchData(data.series[13]);
+  const sensorFifteen = FetchData(data.series[14]);
+  const sensorSixtenn = FetchData(data.series[15]);
+  const sensorSeventeen = FetchData(data.series[16]);
 
-  const colors = ['#FF6663', '#FEB144', '#9EE09E', '#9EC1CF', '#CC99C9'];
+  const theme = useTheme2();
 
   const seriesData = [
     [
       sensorOne.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
@@ -36,11 +45,8 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       sensorTwo.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
+        symbolSize: 1,
         data: item,
       })),
     ],
@@ -48,11 +54,8 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       sensorThree.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
+        symbolSize: 1,
         data: item,
       })),
     ],
@@ -60,182 +63,178 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       sensorFour.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
+        symbolSize: 1,
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorFive.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorSix.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorSeven.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorEight.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorNine.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorTen.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorEleven.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorTwelve.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorThirteen.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorFourteen.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorFifteen.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorSixtenn.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
     [
-      sensorFour.map((item, key) => ({
+      sensorSeventeen.map((item, key) => ({
         name: `G1S${key + 1}`,
         type: 'line',
-        symbol: 'emptycircle',
+        symbolSize: 1,
         smooth: true,
-        itemStyle: {
-          color: colors[key],
-        },
         data: item,
       })),
     ],
   ];
+
+  const yaxis = [0, 100, 200, 300, 400, 500];
 
   const chartsOption: any[] = [];
   for (let i = 0; i < seriesData.length; i++) {
     chartsOption[i] = {
       tooltip: {
         trigger: 'item',
+        position: ['10%', '0'],
         axisPointer: {
           type: 'cross',
           label: {
             backgroundColor: '#6a7985',
           },
+        },
+      },
+
+      visualMap: {
+        top: 1000,
+        right: 1000,
+        pieces: [
+          {
+            gt: 0,
+            lte: 100,
+            color: '#0047AB',
+          },
+          {
+            gt: 100,
+            lte: 200,
+            color: '#7DF9FF',
+          },
+          {
+            gt: 200,
+            lte: 300,
+            color: '#50C878',
+          },
+          {
+            gt: 300,
+            lte: 400,
+            color: 'orange',
+          },
+          {
+            gt: 400,
+            lte: 500,
+            color: 'red',
+          },
+        ],
+        outOfRange: {
+          color: 'brown',
         },
       },
 
@@ -259,16 +258,15 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
         },
       },
       yAxis: {
-        type: 'value',
         name: `Group ${i + 1}`,
         nameTextStyle: {
           align: 'left',
           verticalAlign: 'middle',
-          color: 'black',
+          color: theme.name === 'Dark' ? 'white' : '#181B1F',
         },
         axisLine: {
           lineStyle: {
-            color: 'white',
+            color: theme.name === 'Dark' ? '#181B1F' : 'white',
           },
         },
       },
@@ -276,1162 +274,46 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
     };
   }
 
-  const testOption = {
-    title: {
-      // text: 'Snowchild',
-      textStyle: {
-        color: '#ffb347',
-        fontStyle: 'italic',
-      },
-    },
-    yAxis: {
-      nameGap: 25,
-      data: [0, 100, 200, 300, 400, 500],
-      axisLine: {
-        show: false,
-      },
-      axisTick: {
-        show: false,
-      },
-    },
-
-    xAxis: [{}],
-    series: {
-      name: 'G1S6',
-      type: 'line',
-      symbol: 'emptycircle',
-      smooth: true,
-      itemStyle: {
-        color: 'white',
-      },
-      data: sensorOne[0],
-    },
-  };
-
   return (
     <>
-      <span style={{ position: 'absolute', transform: 'rotate(-90deg)', top: '130px', left: '20px' }}>Temperature</span>
-      <div style={{ width: `${width}`, marginLeft: '-20px' }}>
-        <ReactECharts option={testOption} />
+      <span style={{ position: 'absolute', transform: 'rotate(-90deg)', top: '130px', left: '-10px' }}>
+        Temperature
+      </span>
+      <div
+        style={{
+          position: 'absolute',
+          // border: '2px solid green',
+          display: 'flex',
+          flexDirection: 'column',
+          rowGap: '11px',
+          top: '51px',
+          left: '55px',
+        }}
+      >
+        {yaxis.reverse().map((item, key) => (
+          <div key={key}>{item}</div>
+        ))}
       </div>
       <div
         style={{
+          position: 'absolute',
           display: 'flex',
           flexDirection: 'column',
-          position: 'absolute',
           top: '0px',
-          marginLeft: '120px',
+          left: '100px',
           flexWrap: 'wrap',
           overflowX: 'scroll',
-          width: '1160px',
+          width: '1300px',
           height: '315px',
         }}
       >
         {chartsOption.map((item, key) => (
-          <div style={{ width: '100px' }} key={key}>
+          <div style={{ width: '110px' }} key={key}>
             <ReactECharts option={item} />
           </div>
         ))}
       </div>
-
-      <span style={{ position: 'absolute', top: '312px', left: '50%' }}>Time</span>
+      <span style={{ position: 'absolute', top: '325px', left: '50%' }}>Time</span>
     </>
   );
 };
-
-//commented code
-
-//  <div
-//     className={cx(
-//       styles.wrapper,
-//       css`
-//         width: 500px;
-//         height: 500px;
-//       `
-//     )}
-//   >
-//     <ReactECharts option={chartOptionsTwo} />
-//   </div>
-
-//  <button className={css(styles.button)} onClick={buttonHandler}>
-//     AddData
-//   </button>
-
-// const buttonHandler = () => {
-//   options.fieldName === 'G1S1'
-//     ? setG1S1((prev) => [...prev, [options.time, options.value]])
-//     : options.fieldName === 'G1S2'
-//     ? setG1S2((prev) => [...prev, [options.time, options.value]])
-//     : options.fieldName === 'G1S3'
-//     ? setG1S3((prev) => [...prev, [options.time, options.value]])
-//     : options.fieldName === 'G1S4'
-//     ? setG1S4((prev) => [...prev, [options.time, options.value]])
-//     : options.fieldName === 'G1S5'
-//     ? setG1S5((prev) => [...prev, [options.time, options.value]])
-//     : console.log('no field selected');
-// };
-
-// const chartOptionsOne = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 1',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-//   series: [
-//     {
-//       name: 'G1S1',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S1,
-//     },
-//     {
-//       name: 'G1S2',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S2,
-//     },
-//     {
-//       name: 'G1S3',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S3,
-//     },
-//     {
-//       name: 'G1S4',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S4,
-//     },
-//     {
-//       name: 'G1S5',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S5,
-//     },
-//   ],
-// };
-
-// const chartOptionsTwo = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 2',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S6',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S6,
-//     },
-//     {
-//       name: 'G1S7',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S7,
-//     },
-//     {
-//       name: 'G1S8',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S8,
-//     },
-//     {
-//       name: 'G1S9',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S9,
-//     },
-//     {
-//       name: 'G1S10',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S10,
-//     },
-//   ],
-// };
-
-// const chartOptionsThree = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 3',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S6',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S11,
-//     },
-//     {
-//       name: 'G1S7',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S12,
-//     },
-//     {
-//       name: 'G1S8',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S13,
-//     },
-//     {
-//       name: 'G1S9',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S14,
-//     },
-//     {
-//       name: 'G1S10',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S15,
-//     },
-//   ],
-// };
-
-// const chartOptionsFour = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 4',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S6',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S16,
-//     },
-//     {
-//       name: 'G1S7',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S17,
-//     },
-//     {
-//       name: 'G1S8',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S18,
-//     },
-//     {
-//       name: 'G1S9',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S19,
-//     },
-//     {
-//       name: 'G1S10',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S20,
-//     },
-//   ],
-// };
-
-// const chartOptionsFive = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 5',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S6',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S21,
-//     },
-//     {
-//       name: 'G1S7',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S22,
-//     },
-//     {
-//       name: 'G1S8',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S23,
-//     },
-//     {
-//       name: 'G1S9',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S24,
-//     },
-//     {
-//       name: 'G1S10',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S25,
-//     },
-//   ],
-// };
-// const chartOptionsSix = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 6',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S26',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S26,
-//     },
-//     {
-//       name: 'G1S27',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S27,
-//     },
-//     {
-//       name: 'G1S28',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S28,
-//     },
-//     {
-//       name: 'G1S29',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S29,
-//     },
-//     {
-//       name: 'G1S30',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S30,
-//     },
-//   ],
-// };
-// const chartOptionsSeven = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 7',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S31',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S31,
-//     },
-//     {
-//       name: 'G1S32',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S32,
-//     },
-//     {
-//       name: 'G1S33',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S33,
-//     },
-//     {
-//       name: 'G1S34',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S34,
-//     },
-//     {
-//       name: 'G1S35',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S35,
-//     },
-//   ],
-// };
-
-// const chartOptionsEight = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 8',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S36',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S36,
-//     },
-//     {
-//       name: 'G1S37',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S37,
-//     },
-//     {
-//       name: 'G1S38',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S38,
-//     },
-//     {
-//       name: 'G1S39',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S39,
-//     },
-//     {
-//       name: 'G1S40',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S40,
-//     },
-//   ],
-// };
-
-// const chartOptionsNine = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 9',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S41',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S41,
-//     },
-//     {
-//       name: 'G1S42',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S42,
-//     },
-//     {
-//       name: 'G1S43',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S43,
-//     },
-//     {
-//       name: 'G1S44',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S44,
-//     },
-//     {
-//       name: 'G1S45',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S45,
-//     },
-//   ],
-// };
-
-// const chartOptionsTen = {
-//   tooltip: {
-//     trigger: 'item',
-//     axisPointer: {
-//       type: 'cross',
-//       label: {
-//         backgroundColor: '#6a7985',
-//       },
-//     },
-//   },
-
-//   dataZoom: [
-//     {
-//       start: 0,
-//       end: 115,
-//       xAxisIndex: [0, 10],
-//     },
-//     {
-//       start: 0,
-//       end: 15,
-//       type: 'inside',
-//     },
-//   ],
-//   xAxis: {
-//     type: 'category',
-//     name: 'Time',
-//     data: timeData,
-//     axisLabel: {
-//       interval: 4,
-//     },
-//   },
-
-//   yAxis: {
-//     type: 'value',
-//     name: 'Group 10',
-//     nameTextStyle: {
-//       align: 'left',
-//       verticalAlign: 'middle',
-//       color: 'black',
-//     },
-//     axisLine: {
-//       lineStyle: {
-//         color: 'white',
-//       },
-//     },
-//   },
-
-//   series: [
-//     {
-//       name: 'G1S46',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: options.color,
-//       },
-//       data: G1S46,
-//     },
-//     {
-//       name: 'G1S47',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EC1CF',
-//       },
-//       data: G1S47,
-//     },
-//     {
-//       name: 'G1S48',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#9EE09E',
-//       },
-//       data: G1S48,
-//     },
-//     {
-//       name: 'G1S49',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FEB144',
-//       },
-//       data: G1S49,
-//     },
-//     {
-//       name: 'G1S50',
-//       type: 'line',
-//       symbol: 'emptycircle',
-//       smooth: true,
-//       itemStyle: {
-//         color: '#FF6663',
-//       },
-//       data: G1S50,
-//     },
-//   ],
-// };
-
-// const chartOptions = [
-//   chartOptionsOne,
-//   chartOptionsTwo,
-//   chartOptionsThree,
-//   chartOptionsFour,
-//   chartOptionsFive,
-//   chartOptionsSix,
-//   chartOptionsSeven,
-//   chartOptionsEight,
-//   chartOptionsNine,
-//   chartOptionsTen,
-//   chartOptionsTen,
-//   chartOptionsTen,
-//   chartOptionsTen,
-//   chartOptionsTen,
-// ];
-
-// const theme = useTheme2();
-// const styles = useStyles2(getStyles);
-// const [newArray, setNewArray] = React.useState({ g1s1: [], g1s2: [], g1s3: [], g1s4: [], g1s5: [] });
-
-// const dataArray: any[] = [];
-// for (let i = 0; i < data.series[0].fields.length; i++) {
-//   dataArray.push(data.series[0].fields[i].values.toArray());
-// }
-
-// console.log(dataArray);
-
-// console.log(newArray);
-
-// const [arrayOption, setArrayOption] = React.useState({});
-// const timeInstance: any[][] = [];
-
-// console.log(data.series[0].fields[0].values.toArray().length);
-// const getStyles = () => {
-//   return {
-//     wrapper: css`
-//       font-family: Arial;
-//       position: relative;
-//     `,
-//     svg: css`
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//     `,
-//     textBox: css`
-//       position: absolute;
-//       bottom: 0;
-//       left: 0;
-//       padding: 10px;
-//     `,
-//     button: css`
-//       background-color: #8bd3e6;
-//       color: white;
-//       border: none;
-//       border-radius: 12px;
-//       width: 180px;
-//       height: 50px;
-//       font-size: 18px;
-//     `,
-//     buttonStyle: css`
-//       margin: auto;
-//       width: fit-content;
-//       padding-top: 50px;
-//     `,
-//   };
-// };
