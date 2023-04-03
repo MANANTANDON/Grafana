@@ -1,0 +1,38 @@
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+{
+  "manifestVersion": "2.0.0",
+  "signatureType": "private",
+  "signedByOrg": "m4d616e616e",
+  "signedByOrgName": "m4d616e616e",
+  "rootUrls": [
+    "http://localhost:3000/"
+  ],
+  "plugin": "m4d616e616-heatmap-panel",
+  "version": "1.0.0",
+  "time": 1680518785785,
+  "keyId": "7e4d0c6a708866e7",
+  "files": {
+    "LICENSE": "c5accbbd8546e94c34aed24afe689a617627d18eed5a6c48277e48db57c23851",
+    "CHANGELOG.md": "ba613d6f914b27dce9ace4d8c0cb074273c9eb6c536d8e7ac24c5ce6ae941fd0",
+    "module.js.LICENSE.txt": "f3c46b9963b7e0a4268e3a0a49a6f2c13277c503d9023bdb221507bff8d9898c",
+    "module.js.map": "a440221526e352a8c6550755978069d8f27f3f5957e05ce3a00e717e701c6ab5",
+    "plugin.json": "5938e9bb0228f3c602d2f922b71cf34e847105afea18553f36d3c85d58306811",
+    "README.md": "25411a29afa2352bfb61db976fdb9e934da5c16c71935484edf6e7476c0a9fc5",
+    "img/logo.svg": "1defc6f7e585c67657bcfd8fddc599ee7dfa82f8674413f49fa274c2cd453ec6",
+    "module.js": "ae451c3f29891e05efa5b9e9afb7d20c48b334c66ff975ff539b8adbcf50f5c2"
+  }
+}
+-----BEGIN PGP SIGNATURE-----
+Version: OpenPGP.js v4.10.10
+Comment: https://openpgpjs.org
+
+wrgEARMKAAYFAmQqroEAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm5820AgkBcSW+480MispVXKk1flkTKhXPN0yQw2bOGUt40b68eRWk04mE
+vSj1FbB0ECUwQJhEzaTKEY31WVURMnmZVl7h/JQCCP0BMcZmiQljYJSACSww
+5RYMh0C3JIquhjWf0VvzY4jpD5LyLxsinDKLb2MSr/1qUVSKdKYfujGgfx5k
+//zIdD28
+=tKIa
+-----END PGP SIGNATURE-----

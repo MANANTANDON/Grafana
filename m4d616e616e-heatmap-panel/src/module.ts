@@ -3,38 +3,24 @@ import { SimpleOptions } from './types';
 import { SimplePanel } from './components/SimplePanel';
 
 export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOptions((builder) => {
-  return builder
+  builder
     .addTextInput({
-      path: 'text',
-      name: 'Simple text option',
-      description: 'Description of panel option',
-      defaultValue: 'Default value of text input option',
+      path: 'changeName',
+      name: 'Change Group Name',
+      description: 'write a custom group name before "," to rename it. (max = 17)',
+      defaultValue: ',,,,,,,,,,,,,,,,',
     })
-    .addBooleanSwitch({
-      path: 'showSeriesCount',
-      name: 'Show series counter',
-      defaultValue: false,
+    .addTextInput({
+      path: 'groups',
+      name: 'How many group you want ? ',
+      description: '(max groups = 17)',
+      defaultValue: '',
     })
-    .addRadio({
-      path: 'seriesCountSize',
-      defaultValue: 'sm',
-      name: 'Series counter size',
-      settings: {
-        options: [
-          {
-            value: 'sm',
-            label: 'Small',
-          },
-          {
-            value: 'md',
-            label: 'Medium',
-          },
-          {
-            value: 'lg',
-            label: 'Large',
-          },
-        ],
-      },
-      showIf: (config) => config.showSeriesCount,
+    .addTextInput({
+      path: 'sensorName',
+      name: 'yAxis data',
+      description: 'enter data separated by "," (min sensor = 25)',
     });
+
+  return builder;
 });
