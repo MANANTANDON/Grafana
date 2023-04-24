@@ -1,0 +1,95 @@
+.yAxis {
+  /* border: 2px solid green; */
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  row-gap: 11px;
+  top: 51px;
+  margin-left: -40px;
+}
+
+.xAxis {
+  /* border: 2px solid blue; */
+  position: absolute;
+  top: 235px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.temperatureLabel {
+  /* border: 2px solid red; */
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 130px;
+  left: -22px;
+  font-weight: 500;
+}
+
+.chartBox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  top: -300px;
+  left: 54px;
+  /* border: 2px solid red; */
+  width: fit-content;
+}
+
+/* for every single graph */
+.barGraph {
+  width: 70px;
+  /* border: 2px solid orange; */
+}
+
+.timeLabel {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  font-weight: 500;
+}
+.initial {
+  /* border: 2px solid orange; */
+  margin-left: 20px;
+  margin-top: -8px;
+  width: 434px;
+  padding-left: 34px;
+}
+
+@media screen and (min-width: 1706.67px) {
+  .chartBox {
+    left: 60px;
+  }
+  .initial {
+    margin-left: 27px;
+  }
+  .temperatureLabel {
+    left: -15px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .chartBox {
+    left: 69px;
+  }
+  .initial {
+    margin-left: 35px;
+  }
+  .temperatureLabel {
+    left: -10px;
+  }
+}
+
+@media screen and (min-width: 2048px) {
+  .chartBox {
+    left: 74px;
+  }
+  .initial {
+    margin-left: 40px;
+  }
+  .temperatureLabel {
+    left: -10px;
+  }
+}
