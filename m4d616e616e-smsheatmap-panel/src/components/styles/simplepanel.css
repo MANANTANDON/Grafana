@@ -1,0 +1,75 @@
+.sensorAxis {
+  /* border: 2px solid orangered; */
+  position: absolute;
+  top: 165px;
+  left: 5px;
+  transform: rotate(-90deg);
+  font-weight: 500;
+}
+
+.initialMap {
+  /* border: 2px solid red; */
+  position: absolute;
+  width: 500px;
+  margin-left: 1px;
+}
+
+.heatmap {
+  width: 70px;
+  /* border: 2px solid green; */
+}
+
+.outerBox {
+  /* border: 2px solid pink; */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  top: 0px;
+  left: 52px;
+  width: fit-content;
+}
+
+.informations {
+  /* border: 2px solid green; */
+  width: 55vw;
+  font-size: 30px;
+  height: 50vh;
+  display: grid;
+  place-content: center;
+}
+
+@media screen and (min-width: 1706.67px) {
+  .outerBox {
+    left: 60px;
+  }
+  .initialMap {
+    margin-left: 9px;
+  }
+  .sensorAxis {
+    left: 13px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .outerBox {
+    left: 69px;
+  }
+  .initialMap {
+    margin-left: 18px;
+  }
+  .sensorAxis {
+    left: 22px;
+  }
+}
+
+@media screen and (min-width: 2048px) {
+  .outerBox {
+    left: 74px;
+  }
+  .initialMap {
+    margin-left: 23px;
+  }
+  .sensorAxis {
+    left: 22px;
+  }
+}
