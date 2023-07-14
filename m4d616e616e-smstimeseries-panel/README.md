@@ -1,5 +1,7 @@
 # About the Database
-in your database the first column should be time column and the datatype of that column should be "varchar"# Grafana panel plugin template
+in your database the first column should be time column and the datatype of that column should be "varchar"
+
+# Grafana panel plugin template
 
 This template is a starting point for building a panel plugin for Grafana.
 
